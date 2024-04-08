@@ -30,7 +30,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className=" relative">
+    <div className=" relative z-50">
             <div className="flex justify-between items-center w-full h-20 px-4 bg-white/50 text-white bg-black nav  fixed top-0 left-0">
       <div className="mx-auto flex flex-row space-x-3 text-center w-[50%] justify-items-center">
           <a
@@ -57,7 +57,16 @@ const Navbar = () => {
           >
              <img src="https://i.imgur.com/XxPtbJn.png" className="w-[50%]" />
           </a>
+          <div className="hidden lg:flex flex-row -space-x-10">
+        <a href=""><img src="https://sgi.uj.com.tw/images/btn_social_04.png" className="w-[50%]" alt="" /></a>
+        <a href=""><img src="https://sgi.uj.com.tw/images/btn_social_02_yt.png" className="w-[50%]" alt="" /></a>
+        <a href=""><img src="https://sgi.uj.com.tw/images/btn_social_01_fb.png" className="w-[50%]" alt="" /></a>
+
+        <a href=""><img src="https://sgi.uj.com.tw/images/btn_share_05.png" className="w-[50%]" alt="" /></a>
+
       </div>
+      </div>
+
 
       {/* <ul className="hidden md:flex">
         {links.map(({ id, link }) => (

@@ -32,3 +32,31 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+.mySwiper2 {
+  height: 40%;
+  width: 730px;
+}
+
+.mySwiper2 .swiper-slide {
+background: none;
+}
+
+.mySwiper3 .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.mySwiper3 {
+  height: 20%;
+  box-sizing: border-box;
+  background: none;
+  width: 45%;
+  
+}
+
+.mySwiper3 .swiper-slide {
+  width: 25%;
+  height: 100%;
+  /* opacity: 0.4; */
+  background: none;
+}

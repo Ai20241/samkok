@@ -27,22 +27,19 @@ export default function App() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="https://sgi.uj.com.tw/images/01.webp" />
+          <img src="https://sgi.uj.com.tw//files/images/img_20240325190346.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://sgi.uj.com.tw/images/02.webp" />
+          <img src="https://sgi.uj.com.tw//files/banner/banner_1705566459.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://sgi.uj.com.tw/images/03.webp" />
+          <img src="https://sgi.uj.com.tw//files/banner/banner_1702018771.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://sgi.uj.com.tw/images/04.webp" />
+          <img src="https://sgi.uj.com.tw//files/banner/banner_1702020245.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://sgi.uj.com.tw/images/05.webp" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://sgi.uj.com.tw/images/06.webp" />
+          <img src="https://sgi.uj.com.tw//files/banner/banner_1695190304.jpg" />
         </SwiperSlide>
       </Swiper>
     </>

@@ -1,7 +1,18 @@
+"use client"
 import Image from "next/image";
 import Swiper from  "@/components/Swiper";
 import SwiperLast from "@/components/SwiperLast";
+import SwiperCharacter from "@/components/Swipercharacter";
+import { useState } from "react";
 export default function Home() {
+     // สถานะเพื่อเก็บข้อมูลการแสดงหน้า
+     const [activeTab, setActiveTab] = useState(0);
+
+     // ฟังก์ชันสำหรับการเปลี่ยนแท็บ
+     const handleTabClick = (tabIndex) => {
+         setActiveTab(tabIndex);
+     };
+     
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
         <div className="container">
@@ -24,11 +35,12 @@ export default function Home() {
                 </div>
                 <div className="w-full bg-[#E3E4E7] py-0">
                   <a className="grid grid-cols-4 ">
-                    <a href="" className=" table border-b-[1.5px] border-r-[1.5px] border-[#50509B]"><img src="https://sgi.uj.com.tw/images/news/btn_newstype01_ov.png" className="w-[100px] mx-auto" alt="" /></a>
-                    <a href="" className=" table border-b-[1.5px] border-r-[1.5px] border-[#50509B]"><img src="https://sgi.uj.com.tw/images/news/btn_newstype01_ov.png" className="w-[100px] mx-auto" alt="" /></a>
-                    <a href="" className=" table border-b-[1.5px] border-r-[1.5px] border-[#50509B]"><img src="https://sgi.uj.com.tw/images/news/btn_newstype01_ov.png" className="w-[100px] mx-auto" alt="" /></a>
-                    <a href="" className=" table border-b-[1.5px] border-[#50509B]"><img src="https://sgi.uj.com.tw/images/news/btn_newstype01_ov.png" className="w-[100px] mx-auto" alt="" /></a>
+                    <a   className={`table border-b-[1.5px] border-r-[1.5px] border-[#50509B] ${activeTab === 0 ? 'bg-gray-400 text-white' : 'bg-gray-200 text-gray-800'}`} onClick={() => handleTabClick(0)}><img src="https://sgi.uj.com.tw/images/news/btn_newstype01_ov.png" className="w-[100px] mx-auto" alt="" /></a>
+                    <a   className={`table border-b-[1.5px] border-r-[1.5px] border-[#50509B] ${activeTab === 1 ? 'bg-gray-400 text-white' : 'bg-gray-200 text-gray-800'}`} onClick={() => handleTabClick(1)}><img src="https://sgi.uj.com.tw/images/news/btn_newstype01_ov.png" className="w-[100px] mx-auto" alt="" /></a>
+                    <a  className={`table border-b-[1.5px] border-r-[1.5px] border-[#50509B] ${activeTab === 2 ? 'bg-gray-400 text-white' : 'bg-gray-200 text-gray-800'}`} onClick={() => handleTabClick(2)}><img src="https://sgi.uj.com.tw/images/news/btn_newstype01_ov.png" className="w-[100px] mx-auto" alt="" /></a>
+                    <a  className={`table border-b-[1.5px] border-r-[1.5px] border-[#50509B] ${activeTab === 3 ? 'bg-gray-400 text-white' : 'bg-gray-200 text-gray-800'}`} onClick={() => handleTabClick(3)}><img src="https://sgi.uj.com.tw/images/news/btn_newstype01_ov.png" className="w-[100px] mx-auto" alt="" /></a>
                   </a>
+                  {activeTab === 0 &&
                   <div className="content">
                     <div className="flex flex-col">
                       <a href="" className="flex justify-between my-2 mx-2 hover:bg-slate-400">
@@ -37,14 +49,48 @@ export default function Home() {
                       </a>
                     </div>
                     
-                  </div>
+                  </div>}
+
+                  {activeTab === 1 &&
+                  <div className="content">
+                    <div className="flex flex-col">
+                      <a href="" className="flex justify-between my-2 mx-2 hover:bg-slate-400">
+                        <span className="text-[#50509B] font-bold">dawd</span>
+                        <span className="text-[#50509B]">2024/03/26</span>
+                      </a>
+                    </div>
+                  </div>}
+
+                  {activeTab === 2 &&
+                  <div className="content">
+                    <div className="flex flex-col">
+                      <a href="" className="flex justify-between my-2 mx-2 hover:bg-slate-400">
+                        <span className="text-[#50509B] font-bold">dawd</span>
+                        <span className="text-[#50509B]">2024/03/26</span>
+                      </a>
+                    </div>
+                  </div>}
+
+                  {activeTab === 3 &&
+                  <div className="content">
+                    <div className="flex flex-col">
+                      <a href="" className="flex justify-between my-2 mx-2 hover:bg-slate-400">
+                        <span className="text-[#50509B] font-bold">dawd</span>
+                        <span className="text-[#50509B]">2024/03/26</span>
+                      </a>
+                    </div>
+                  </div>}
+
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="my-5">
+          <div className="my-5 container w-full mx-auto">
             <img src="https://sgi.uj.com.tw/images/page_title_03_ch.webp" className="mx-auto table w-[40%]" alt="" />
+            <div>
+              <SwiperCharacter />
+            </div>
           </div>
         </div>
     </main>
