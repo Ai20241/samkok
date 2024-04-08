@@ -36,6 +36,7 @@ export default function Home() {
                         <span className="text-[#50509B]">2024/03/26</span>
                       </a>
                     </div>
+                    
                   </div>
                 </div>
               </div>
